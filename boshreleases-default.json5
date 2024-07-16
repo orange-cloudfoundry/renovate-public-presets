@@ -1,0 +1,22 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  packageRules: [
+    {
+      description: 'Auto-merge github actions from github or orange-cloudfoundry',
+      matchPackageNames: [
+        'actions/checkout',
+        'actions/upload-artifact',
+        'orange-cloudfoundry/create-bosh-release-action',
+        'orange-cloudfoundry/extract-vendir-version-action'
+      ],
+      //see https://docs.renovatebot.com/key-concepts/automerge/#automerge-non-major-updates
+      matchUpdateTypes: [
+        'patch',
+        'minor'
+      ],
+      automerge: true,
+      //see https://docs.renovatebot.com/key-concepts/automerge/#absence-of-tests
+      ignoreTests: true,
+    }
+  ]
+}
