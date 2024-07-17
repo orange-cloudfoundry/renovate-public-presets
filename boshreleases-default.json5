@@ -8,6 +8,7 @@
         'actions/upload-artifact',
         'orange-cloudfoundry/create-bosh-release-action',
         'orange-cloudfoundry/extract-vendir-version-action',
+        'carvel-dev/vendir'
       ],
       //see https://docs.renovatebot.com/key-concepts/automerge/#automerge-non-major-updates
       matchUpdateTypes: [
