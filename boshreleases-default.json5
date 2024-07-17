@@ -3,11 +3,10 @@
   packageRules: [
     {
       description: 'Auto-merge github actions from github or orange-cloudfoundry',
-      matchPackagePatterns: [
-        'actions/checkout',
-        'actions/upload-artifact',
-        'orange-cloudfoundry/create-bosh-release-action',
-        'orange-cloudfoundry/extract-vendir-version-action',
+      // trust actions from github, orange-cloudfoundry and orgs listed below
+      matchPackagePrefixes: [
+        'actions/',
+        'orange-cloudfoundry/',
         'carvel-dev/vendir'
       ],
       //only auto-merge on master or main branches,
