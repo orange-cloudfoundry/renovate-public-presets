@@ -7,7 +7,7 @@
         'actions/checkout',
         'actions/upload-artifact',
         'orange-cloudfoundry/create-bosh-release-action',
-        'orange-cloudfoundry/extract-vendir-version-action'
+        'orange-cloudfoundry/extract-vendir-version-action',
       ],
       //see https://docs.renovatebot.com/key-concepts/automerge/#automerge-non-major-updates
       matchUpdateTypes: [
@@ -17,6 +17,9 @@
       automerge: true,
       //see https://docs.renovatebot.com/key-concepts/automerge/#absence-of-tests
       ignoreTests: true,
+      addLabels: [
+        'auto-merged',
+      ]
     }
   ]
 }
