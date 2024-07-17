@@ -3,7 +3,7 @@
   packageRules: [
     {
       description: 'Auto-merge github actions from github or orange-cloudfoundry',
-      matchPackageNames: [
+      matchPackagePatterns: [
         'actions/checkout',
         'actions/upload-artifact',
         'orange-cloudfoundry/create-bosh-release-action',
