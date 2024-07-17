@@ -16,7 +16,8 @@
       //see https://docs.renovatebot.com/key-concepts/automerge/#automerge-non-major-updates
       matchUpdateTypes: [
         'patch',
-        'minor'
+        'minor',
+        'digest'
       ],
       automerge: true,
       //see https://docs.renovatebot.com/key-concepts/automerge/#absence-of-tests
