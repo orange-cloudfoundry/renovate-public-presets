@@ -10,6 +10,10 @@
         'orange-cloudfoundry/extract-vendir-version-action',
         'carvel-dev/vendir'
       ],
+      //only auto-merge on master or main branches,
+      matchBaseBranches: [
+        'main', 'master'
+      ],
       //see https://docs.renovatebot.com/key-concepts/automerge/#automerge-non-major-updates
       matchUpdateTypes: [
         'patch',
