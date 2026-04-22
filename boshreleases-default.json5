@@ -5,7 +5,7 @@
       description: 'Auto-merge github actions from github or orange-cloudfoundry',
       // trust actions from github, orange-cloudfoundry and orgs listed below
       matchPackagePrefixes: [
-        'actions/',
+        'actions/', // github.com owned actions such as actions/checkout
         'orange-cloudfoundry/',
         'carvel-dev/vendir'
       ],
@@ -20,6 +20,7 @@
         'digest'
       ],
       automerge: true,
+      minimumReleaseAge: "3 days", // inspired by https://docs.renovatebot.com/presets-security/#securityminimumreleaseagenpm
       //see https://docs.renovatebot.com/key-concepts/automerge/#absence-of-tests
       ignoreTests: true,
       addLabels: [
